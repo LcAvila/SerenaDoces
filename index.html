@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="src/styles/styles.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <title>Landing page</title>
+</head>
+
+<body>
+    <header>
+        <nav id="navbar">
+
+            <ul id="nav_list">
+                <li class="nav-item active">
+                    <a href="#home">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#menu">Cardápio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#testimonials">Sobre Nós</a>
+                </li>
+            </ul>
+
+
+            
+                <a href="#home"> <img src="src/images/Logo Serena.png" alt="Logo"></a>
+            
+
+
+            <button class="btn-shop">
+                <i id="fa-cart-shopping" class="fa-solid fa-cart-shopping"></i>
+            </button>
+
+            <button id="mobile_btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+
+        <div id="mobile_menu">
+            <ul id="mobile_nav_list">
+                <li class="nav-item">
+                    <a href="#home">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#menu">Cardápio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#testimonials">Sobre Nós</a>
+                </li>
+            </ul>
+
+            <button class="btn-cart">
+                <i id="fa-cart-shopping" class="fa-solid fa-cart-shopping"></i>
+            </button>
+        </div>
+    </header>
+
+    <main id="content">
+        <section id="home">
+            <div class="shape"></div>
+            <div id="cta">
+                <h1 class="title">
+                    O sabor que vai até
+                    <span>você</span>
+                </h1>
+
+                <p class="description">
+                    O lugar onde a felicidade se encontra em cada pedaço! Delicie-se com nossos doces fresquinhos e
+                    feitos com muito carinho. Venha provar!
+                </p>
+
+                <div id="cta_buttons">
+                    <a href="#menu" class="btn-default">
+                        Ver cardápio
+                    </a>
+
+                </div>
+
+                <div class="social-media-buttons">
+                    <a href="">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/serenadoces/?igsh=MW1kM2h6Z29oNGI0OQ%3D%3D" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="https://www.facebook.com/serenadoces.com.br?mibextid=wwXIfr&rdid=QKyxOw9BH6kUXDLi&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F14YRHinft6%2F%3Fmibextid%3DwwXIfr#" target="_blank">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div id="banner">
+                <img src="src/images/hero1.png" alt="">
+            </div>
+        </section>
+
+        <section id="menu">
+            <h2 class="section-title">Cardápio</h2>
+            <h3 class="section-subtitle">Nossas Novidades!</h3>
+
+            <div id="dishes">
+                <div class="dish">
+                    <div class="dish-heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/images/Produtos/Mini Donuts.jpeg" class="dish-image" alt="">
+
+                    <h3 class="dish-title">
+                        Mini Donuts
+                    </h3>
+
+                    <span class="dish-description">
+                        Massa fofinha e aerada, como um delicioso recheio cremoso de chocolete coberto com açúcar
+                        especial.
+                    </span>
+
+                    <div class="dish-rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        
+                    </div>
+
+                    <div class="dish-price">
+                        <h4>R$10,00</h4>
+                        <button class="btn-default">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="dish">
+                    <div class="dish-heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/images/Produtos/mousse de ninho com nutella.jpeg" class="dish-image" alt="">
+
+                    <h3 class="dish-title">
+                        Bolo de Pote Ninho c/ Nutella
+                    </h3>
+
+                    <span class="dish-description">
+                        Delicie-se com o Bolo de Mousse de Ninho com Nutella. Uma explosão de sabores irresistíveis.
+                    </span>
+
+                    <div class="dish-rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        
+                    </div>
+
+                    <div class="dish-price">
+                        <h4>R$14,00</h4>
+                        <button class="btn-default">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="dish">
+                    <div class="dish-heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/images/Produtos/surpresa de uva.jpeg" class="dish-image" alt="">
+
+                    <h3 class="dish-title">
+                        Surpresa de Uva
+                    </h3>
+
+                    <span class="dish-description">
+                        Sobremesa de dar água na boca, com uvas perfeitamentes selecionadas e um delicioso ganache de
+                        chocolate
+                    </span>
+
+                    <div class="dish-rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        
+                    </div>
+
+                    <div class="dish-price">
+                        <h4>R$15,00</h4>
+                        <button class="btn-default">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="dish">
+                    <div class="dish-heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/images/Produtos/Banoffee.jpeg" class="dish-image" alt="">
+
+                    <h3 class="dish-title">
+                        Banoffee
+                    </h3>
+
+                    <span class="dish-description">
+                        Base da torta feita com farofa de bolacha maisena, generosa camada de doce de leite artesanal,
+                        rodelas de banana.
+                    </span>
+
+                    <div class="dish-rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        
+                    </div>
+
+                    <div class="dish-price">
+                        <h4>R$15,00</h4>
+                        <button class="btn-default">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="bnr-1">
+            <img id="banner1" src="src/images/banner.png" alt="">
+        </section>
+
+
+        <section id="testimonials">
+            <img src="src/images/chef.png" id="testimonial_chef" alt="">
+
+            <div id="testimonials_content">
+                <h2 class="section-title">
+                    Sobre Nós
+                </h2>
+                <h3 class="section-subtitle">
+                    O que ofereçemos para os nossos clientes
+                </h3>
+
+                <div id="feedbacks">
+                    <p>Na <span>Serena Doces</span>, acreditamos que cada doce é uma experiência única, feita para
+                        trazer um sorriso
+                        ao seu rosto. Nossa missão é oferecer produtos frescos, deliciosos e preparados com ingredientes
+                        de qualidade, sempre com muito carinho e atenção aos detalhes. Aqui, você encontra uma variedade
+                        de opções para todos os gostos, desde os tradicionais brigadeiros e bolos até as mais deliciosas
+                        sobremesas.
+
+                        Nosso compromisso é garantir que cada compra seja especial e que você se sinta em casa. Seja
+                        para um presente, uma festa ou simplesmente para adoçar o seu dia, estamos aqui para tornar tudo
+                        mais doce e prazeroso. Com um atendimento acolhedor e produtos feitos com muito amor, sua
+                        satisfação é nossa prioridade.
+
+                        Venha conhecer a Serena Doces e experimente o verdadeiro sabor da felicidade! Estamos prontos
+                        para receber você com um sorriso e um doce delicioso.</p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <img src="src/images/wave.svg" alt="">
+
+        <div id="footer_items">
+            <span id="copyright">
+                &copy 2024 Lucas Ávila
+            </span>
+
+            <img id="footer-img" src="src/images/identidade/branco1.png" alt="">
+
+            <div class="social-media-buttons">
+                <a href="">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+
+                <a href="https://www.instagram.com/serenadoces/?igsh=MW1kM2h6Z29oNGI0OQ%3D%3D" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="https://www.facebook.com/serenadoces.com.br?mibextid=wwXIfr&rdid=QKyxOw9BH6kUXDLi&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F14YRHinft6%2F%3Fmibextid%3DwwXIfr#" target="_blank">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="src/javascript/script.js"></script>
+</body>
+
+</html>
