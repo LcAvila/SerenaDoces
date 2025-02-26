@@ -1,6 +1,6 @@
 header {
     width: 100%;
-    padding: 28px 8%;
+    padding: 28px 4%;
     position: sticky;
     top: 0;
     background-color: var(--color-primary-1);
@@ -10,25 +10,64 @@ header {
 #navbar {
     width: 100%;
     height: 70px;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr; /* Mantém as 3 colunas */
     align-items: center;
-    justify-content: space-between;
-    text-align: center;
+    gap: 40px;
+    position: relative; /* Adicionado */
 }
-#navbar img{
-    margin-left: -18rem;
+
+/* Links da esquerda */
+.nav-left {
+    display: flex;
+    gap: 32px;
+    justify-content: flex-end; /* Alinha à direita da sua coluna */
+}
+
+/* Logo centralizada */
+#navbar .logo-container {
+    position: relative;
+    padding: 8px;
+    background-color: var(--color-neutral-0);
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin: 0 auto; /* Centraliza na coluna do meio */
+    grid-column: 2; /* Coloca na coluna do meio */
+}
+
+#navbar .logo-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+#navbar img {
+    width: 120px;
+    height: auto;
+}
+
+/* Links da direita */
+.nav-right {
+    display: flex;
+    gap: 32px;
+    justify-content: flex-start;
+    align-items: center; /* Centraliza verticalmente */
+    height: 100%; /* Garante altura total */
 }
 
 #nav_list {
-    display: flex;
-    list-style: none;
-    gap: 48px;
+    display: none; /* Removemos a lista antiga */
 }
 
 .nav-item a {
     text-decoration: none;
     color: #1d1d1dad;
     font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-item a:hover {
+    color: var(--color-primary-6);
 }
 
 .nav-item.active a {
@@ -44,22 +83,118 @@ header {
     display: none;
 }
 
+/* Estilos para o item de usuário na navbar */
+.user-nav-item {
+    position: absolute; /* Volta para absolute */
+    right: 0;          /* Alinha à direita */
+    top: 15px;        /* Ajusta a posição vertical */
+    cursor: pointer;
+}
+
+.user-nav-item .user-button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 16px;
+    background-color: var(--color-primary-5);
+    border-radius: 20px;
+    color: var(--color-primary-1);
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.user-nav-item .user-button:hover {
+    background-color: var(--color-primary-6);
+}
+
+.user-nav-item .login-link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 16px;
+    background-color: var(--color-primary-5);
+    border-radius: 20px;
+    color: var(--color-primary-1) !important;
+    transition: background-color 0.3s ease;
+}
+
+.user-nav-item .login-link:hover {
+    background-color: var(--color-primary-6);
+}
+
+.user-nav-item .user-button i {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+.user-nav-item.active .user-button i {
+    transform: rotate(180deg);
+}
+
+.user-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    min-width: 200px;
+    z-index: 1000;
+}
+
+.user-menu.active {
+    display: block;
+}
+
+.user-menu .user-name {
+    display: block;
+    padding: 12px 16px;
+    font-weight: 600;
+    color: var(--color-primary-8);
+    border-bottom: 1px solid #eee;
+}
+
+.user-menu a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 16px;
+    color: var(--color-primary-8);
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.user-menu a:hover {
+    background-color: #f5f5f5;
+}
+
+.user-menu a i {
+    width: 20px;
+    text-align: center;
+    transform: none !important; /* Força os ícones do menu a ficarem na posição normal */
+}
+
 @media screen and (max-width: 1170px) {
-    #nav_list,
-    #navbar .btn-default{
+    #navbar {
+        grid-template-columns: auto auto auto; /* Mantém as 3 colunas no mobile */
+        padding: 0 20px;
+    }
+
+    .nav-left, .nav-right {
         display: none;
     }
 
-    #navbar img{
-        margin-left: 0;
+    #navbar .logo-container {
+        grid-column: 2; /* Mantém na coluna do meio */
+        margin: 0 auto; /* Mantém centralizado */
     }
-
-    #navbar .btn-shop{
-      display: none ;
-    }
-    
 
     #mobile_btn {
+        grid-column: 3; /* Coloca na última coluna */
+        justify-self: end; /* Alinha à direita */
+        position: relative; /* Remove posicionamento absoluto */
+        right: 0;
         display: block;
         border: none;
         background-color: transparent;
@@ -77,16 +212,67 @@ header {
         display: flex;
         flex-direction: column;
         gap: 12px;
-        margin: 12px 0px;
+        margin: 12px 0;
     }
 
     #mobile_nav_list .nav-item {
         list-style: none;
         text-align: center;
-    } 
+    }
 
-    #banner1{
+    #mobile_nav_list .user-nav-item {
+        margin: 10px 0;
+    }
+
+    #mobile_nav_list .user-nav-item .login-link {
+        justify-content: center;
+        width: 200px; /* Largura fixa para melhor aparência */
+    }
+
+    #mobile_nav_list .user-menu {
+        width: 200px;
+        margin: 10px auto;
+    }
+
+    #banner1 {
         width: 100%;
     }
 
+    .user-nav-item {
+        position: static; /* Volta para posição normal no mobile */
+        margin: 10px 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #navbar {
+        padding: 0 10px;
+    }
+
+    #navbar .logo-container {
+        transform: scale(0.9); /* Reduz um pouco o tamanho da logo */
+    }
+}
+
+/* Mantenha apenas os estilos necessários */
+.user-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background-color: var(--color-primary-5);
+    border-radius: 20px;
+    color: var(--color-primary-1);
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.user-menu-header {
+    padding: 12px 16px;
+    border-bottom: 1px solid #eee;
+    background: var(--color-primary-5);
+}
+
+.user-menu-header .user-name {
+    color: var(--color-primary-1);
 }

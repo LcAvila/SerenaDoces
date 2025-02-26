@@ -20,6 +20,43 @@ footer {
     font-weight: 500;
 }
 
+#footer_items .social-links {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+#footer_items .social-links a {
+    color: #fff;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+#footer_items .social-links a:hover {
+    transform: translateY(-3px);
+}
+
+#footer_items .social-links .whatsapp:hover {
+    color: #25D366;
+}
+
+#footer_items .social-links .instagram:hover {
+    color: #E1306C;
+}
+
+#footer_items .social-links .facebook:hover {
+    color: #1877F2;
+}
+
 @media screen and (max-width: 600px) {
     #footer_items {
         flex-direction: column;

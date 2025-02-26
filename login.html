@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Serena Doces</title>
+    
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="src/styles/styles.css">
+    <link rel="shortcut icon" href="./src/images/favicon/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <!-- Links da esquerda -->
+            <div class="nav-left">
+                <div class="nav-item">
+                    <a href="index.html">Início</a>
+                </div>
+                <div class="nav-item">
+                    <a href="cardapio.html">Cardápio</a>
+                </div>
+            </div>
+
+            <!-- Logo centralizada -->
+            <div class="logo-container">
+                <a href="index.html"> <img src="src/images/Logo Serena.png" alt="Logo"> </a>
+            </div>
+
+            <!-- Links da direita -->
+            <div class="nav-right">
+                <div class="nav-item">
+                    <a href="sobre.html">Sobre Nós</a>
+                </div>
+                <div class="nav-item">
+                    <a href="contato.html">Contato</a>
+                </div>
+                <div class="nav-item user-nav-item">
+                    <a href="login.html" class="login-link">
+                        <i class="fas fa-user"></i> Entrar
+                    </a>
+                    <div class="user-menu">
+                        <span class="user-name"></span>
+                        <a href="profile.html">Meu Perfil</a>
+                        <a href="#" onclick="logout()">Sair</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="content">
+        <section id="login">
+            <div class="login-container">
+                <h2>Login</h2>
+                <form id="loginForm" onsubmit="handleLogin(event)">
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Senha:</label>
+                        <input type="password" id="password" required>
+                    </div>
+                    <button type="submit" class="btn-default">Entrar</button>
+                    <p class="register-link">
+                        Não tem uma conta? <a href="register.html">Cadastre-se</a>
+                    </p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <img src="src/images/wave.svg" alt="">
+        <div id="footer_items">
+            <span id="copyright">
+                Desenvolvido por Lucas Ávila &copy; 2025
+            </span>
+
+            <img id="footer-img" src="src/images/identidade/branco1.png" alt="">
+
+            <div class="social-links">
+                <a href="https://api.whatsapp.com/send?phone=5521975289784" target="_blank" class="whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <a href="https://www.instagram.com/serenadoces/" target="_blank" class="instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/serenadoces.com.br" target="_blank" class="facebook">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="src/javascript/script.js"></script>
+    <script src="src/javascript/login.js"></script>
+</body>
+</html> 

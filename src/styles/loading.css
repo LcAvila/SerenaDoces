@@ -1,0 +1,122 @@
+/* Importando fonte do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+.loading-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    transition: opacity 0.5s ease-out;
+}
+
+.loading-content {
+    text-align: center;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.loading-logo {
+    width: 250px;
+    height: auto;
+    animation: logoAnimation 5s infinite;
+    filter: drop-shadow(0 0 10px rgba(255, 87, 87, 0.3));
+}
+
+.loading-text {
+    margin-top: 30px;
+    font-family: 'Pacifico', cursive;
+    font-size: 2rem;
+    color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+}
+
+.loading-text span {
+    display: inline-block;
+    animation: textBounce 1.5s infinite;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Aplicando delay para cada letra */
+.loading-text span:nth-child(1) { animation-delay: 0.1s; }
+.loading-text span:nth-child(2) { animation-delay: 0.2s; }
+.loading-text span:nth-child(3) { animation-delay: 0.3s; }
+.loading-text span:nth-child(4) { animation-delay: 0.4s; }
+.loading-text span:nth-child(5) { animation-delay: 0.5s; }
+.loading-text span:nth-child(6) { animation-delay: 0.6s; }
+.loading-text span:nth-child(7) { animation-delay: 0.7s; }
+.loading-text span:nth-child(8) { animation-delay: 0.8s; }
+.loading-text span:nth-child(9) { animation-delay: 0.9s; }
+.loading-text span:nth-child(10) { animation-delay: 1.0s; }
+.loading-text span:nth-child(11) { animation-delay: 1.1s; }
+.loading-text span:nth-child(12) { animation-delay: 1.2s; }
+.loading-text span:nth-child(13) { animation-delay: 1.3s; }
+
+/* Animações */
+@keyframes logoAnimation {
+    0% {
+        transform: translateY(0) rotateY(0);
+        filter: drop-shadow(0 0 10px rgba(255, 87, 87, 0.3));
+    }
+    25% {
+        transform: translateY(-15px) rotateY(5deg);
+        filter: drop-shadow(0 0 15px rgba(255, 87, 87, 0.5));
+    }
+    50% {
+        transform: translateY(0) rotateY(0);
+        filter: drop-shadow(0 0 20px rgba(255, 87, 87, 0.7));
+    }
+    75% {
+        transform: translateY(-15px) rotateY(-5deg);
+        filter: drop-shadow(0 0 15px rgba(255, 87, 87, 0.5));
+    }
+    100% {
+        transform: translateY(0) rotateY(0);
+        filter: drop-shadow(0 0 10px rgba(255, 87, 87, 0.3));
+    }
+}
+
+@keyframes textBounce {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+        color: var(--primary-color);
+    }
+    50% {
+        transform: translateY(-15px) scale(1.1);
+        color: #ff3333;
+    }
+}
+
+.loading-container.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .loading-logo {
+        width: 200px;
+    }
+
+    .loading-text {
+        font-size: 1.5rem;
+    }
+}
+
+#main-content {
+    transition: opacity 0.5s ease-in;
+    min-height: 100vh;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+} 
